@@ -28,6 +28,12 @@ interface TaskDao {
     @Query("SELECT COUNT(*) FROM tasks WHERE isCompleted = 0")
     fun getActiveTaskCount(): Flow<Int>
 
+    @Query("SELECT * FROM tasks WHERE isCompleted = 0 AND dueDate = :date ORDER BY priority DESC")
+    suspend fun getTasksForDateOnce(date: String): List<Task>
+
+    @Query("SELECT COUNT(*) FROM tasks WHERE isCompleted = 0")
+    suspend fun getActiveTaskCountOnce(): Int
+
     @Query("SELECT * FROM tasks WHERE reminderEnabled = 1 AND isCompleted = 0")
     suspend fun getTasksWithReminders(): List<Task>
 

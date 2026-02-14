@@ -26,9 +26,11 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -37,6 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.markovmozak.app.ui.components.ConfettiAnimation
 import com.markovmozak.app.ui.components.FunnyEmptyState
 import com.markovmozak.app.ui.components.MarkoSnackbar
 import com.markovmozak.app.ui.components.TaskCard
@@ -56,6 +59,7 @@ fun HomeScreen(
 
     val snackbarHostState = remember { SnackbarHostState() }
     var greeting by remember { mutableStateOf(viewModel.getGreeting()) }
+    var confettiTrigger by remember { mutableIntStateOf(0) }
 
     LaunchedEffect(snackbarMessage) {
         snackbarMessage?.let {
@@ -103,6 +107,7 @@ fun HomeScreen(
             }
         }
     ) { padding ->
+        Box {
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
@@ -174,12 +179,17 @@ fun HomeScreen(
                 items(todayTasks, key = { it.id }) { task ->
                     TaskCard(
                         task = task,
-                        onToggleComplete = { viewModel.toggleTaskComplete(it) },
+                        onToggleComplete = {
+                            if (!it.isCompleted) confettiTrigger++
+                            viewModel.toggleTaskComplete(it)
+                        },
                         onEdit = { onNavigateToEditTask(it.id) },
                         onDelete = { viewModel.deleteTask(it) }
                     )
                 }
             }
+        }
+        ConfettiAnimation(trigger = confettiTrigger > 0, key = confettiTrigger)
         }
     }
 }

@@ -11,7 +11,12 @@ object MarkoMessages {
         "Jutro, legendo! Kava prva, zadaci drugi... ili nikad.",
         "Marko, sunce je izašlo. Tvoji zadaci čekaju. Kao i uvijek.",
         "Dobro jutro! Novi dan, nove prilike da odgađaš stvari.",
-        "E Marko, ustao si! To je već pola posla. Doslovno."
+        "E Marko, ustao si! To je već pola posla. Doslovno.",
+        "Jutro! Jesi sanjao da si produktivan? Probaj to i na javi.",
+        "Dobro jutro, Marko! Kava te čeka. Zadaci isto, ali s manje entuzijazma.",
+        "Ustaj, šampione! Tvoja lista zadataka se neće sama riješiti. Vjeruj mi, probala je.",
+        "Marko! Novi dan, iste navike. Ali tko zna, možda danas bude drugačije? 😂",
+        "Jutarnji alarm: Marko, imaš odgovornosti. Znam, šokantno."
     )
 
     private val afternoonGreetings = listOf(
@@ -19,7 +24,12 @@ object MarkoMessages {
         "Pola dana je prošlo. Koliko zadataka si riješio? Ne odgovaraj.",
         "Marko, ručak je gotov. Zadaci nisu.",
         "Popodne je! Savršeno vrijeme za... odgađanje.",
-        "Hej Marko, dan ne traje vječno. Ali tvoja lista zadataka možda da."
+        "Hej Marko, dan ne traje vječno. Ali tvoja lista zadataka možda da.",
+        "Popodnevna provjera: Još uvijek čekam da nešto odradiš.",
+        "Marko, već je popodne. Nemoj mi reći da si cijelo jutro 'planirao'.",
+        "Pola dana gotovo! Rezultati? Nema ih? Klasika.",
+        "Hej, jesi bar ručao? Jer zadatke sigurno nisi pojeo.",
+        "Popodne je, Marko. Idealan trenutak da počneš ono što si trebao ujutro."
     )
 
     private val eveningGreetings = listOf(
@@ -27,7 +37,12 @@ object MarkoMessages {
         "Večer je. Što si danas napravio? Nemoj lagati.",
         "Marko, još malo pa spavanje. Zadaci? Sutra. Možda.",
         "Dobra večer! Tvoji zadaci ti žele laku noć. I dalje čekaju.",
-        "E Marko, barem si preživio još jedan dan. Zadaci isto."
+        "E Marko, barem si preživio još jedan dan. Zadaci isto.",
+        "Večer je! Vrijeme za odmor. Čekaj, od čega se odmarat?",
+        "Marko, dan je gotov. Tvoja produktivnost danas? Neću komentirati.",
+        "Laku noć, Marko! Sutra te čeka sve što si danas ignorirao. 🌙",
+        "Večernji izvještaj: Zadaci - 1, Marko - 0. Ali sutra je revanš!",
+        "Hej Marko, jesi čuo za 'early bird gets the worm'? Sutra probaj."
     )
 
     fun getGreeting(): String {
@@ -50,7 +65,15 @@ object MarkoMessages {
         "Marko obavio zadatak?! Ovo ide u kalendar! 📅",
         "Čekaj, ti zapravo RADIŠ stvari? Impresivno!",
         "Bravo! Tvoja mama bi bila ponosna. Možda.",
-        "WOOOOW! Marko u akciji! 🚀"
+        "WOOOOW! Marko u akciji! 🚀",
+        "Tko si ti i što si napravio s pravim Markom?!",
+        "Još %d zadataka. Ali hej, napredak je napredak!",
+        "Zadatak riješen! Zaslužio si pauzu. Ali ne predugu. 😏",
+        "Marko produktivan?! Trebam screenshot kao dokaz!",
+        "LEGENDO! Jedan manje, slava tebi! 🏆",
+        "Ovo zaslužuje pivu! Ali tek nakon ostalih %d zadataka.",
+        "Nemoguće! Marko radi! Zovite Guinness! 📖",
+        "Odlično! Sad zamisli da tako radiš SVAKI dan!"
     )
 
     fun getCompletionMessage(remainingTasks: Int): String {
@@ -65,7 +88,12 @@ object MarkoMessages {
         "Ova lista je duža od tvog izgovora zašto nisi ništa napravio.",
         "%d zadataka čeka. Možda počni s jednim? Samo prijedlog.",
         "Marko, %d zadataka. To je novi rekord! Ali ne onaj dobar.",
-        "Imaš %d otvorenih zadataka. Čak i ja se umaram od gledanja."
+        "Imaš %d otvorenih zadataka. Čak i ja se umaram od gledanja.",
+        "%d zadataka?! Marko, ovo je aplikacija, ne roman!",
+        "Imaš %d stvari za obaviti. Dišem duboko umjesto tebe.",
+        "Marko, %d zadataka. Da sam čovjek, dobio bih napadaj panike.",
+        "Još %d zadataka. Trebam li zvati pomoć? 🚨",
+        "Lista raste, Marko. %d zadataka. Kad misliš početi?"
     )
 
     fun getManyTasksMessage(count: Int): String {
@@ -80,7 +108,11 @@ object MarkoMessages {
         "Ili si sve obavio, ili si sve zaboravio upisati.",
         "Nema zadataka? Marko, jesi li siguran?",
         "Prazna lista! Ili si produktivan ili si u poricanju.",
-        "Nema ništa za napraviti? Sumnjam, ali OK."
+        "Nema ništa za napraviti? Sumnjam, ali OK.",
+        "Wow, prazno! Kao tvoj frižider subotom.",
+        "Nula zadataka. Ili si genije ili si zaboravio sve upisati.",
+        "Prazna lista! Marko, tko si ti i gdje je pravi Marko?",
+        "Ništa za danas? Sumnjivo mirno... previše mirno. 🕵️"
     )
 
     fun getEmptyTaskMessage(): String = emptyTaskMessages.random()
@@ -90,25 +122,34 @@ object MarkoMessages {
     private val level0Reminders = listOf(
         "Hej Marko, podsjećam te: %s",
         "Marko, sjeti se: %s",
-        "Prijateljski podsjetnik: %s 😊"
+        "Prijateljski podsjetnik: %s 😊",
+        "Psst, Marko! Ne zaboravi: %s",
+        "Mali podsjetnik za tebe: %s ✨"
     )
 
     private val level1Reminders = listOf(
         "Marko... OVO JOŠ NISI NAPRAVIO?! %s",
         "Drugi put te pitam: %s. Hajde!",
-        "Marko, ne ignoriraj me! %s"
+        "Marko, ne ignoriraj me! %s",
+        "Halo? Marko? %s još čeka!",
+        "Ponovo ja. %s. Sjećaš se? Očito ne."
     )
 
     private val level2Reminders = listOf(
         "MARKO! Treći put te pitam! %s!!",
         "OVO JE OZBILJNO: %s. NAPRAVI TO!",
-        "Marko, počinjem se ljutiti. %s. SADA."
+        "Marko, počinjem se ljutiti. %s. SADA.",
+        "Gubim strpljenje, Marko. %s. ODMAH!",
+        "Koliko puta još?! %s!!! Hajde već jednom!"
     )
 
     private val level3Reminders = listOf(
         "Zovem ti mamu ako ne napraviš: %s 😤",
         "ZADNJI PUT: %s!!! Poslije ovoga šaljem poruku svima!",
-        "MARKO!!! %s!!! NE TESTIRAJ ME!!!"
+        "MARKO!!! %s!!! NE TESTIRAJ ME!!!",
+        "KRAJ STRPLJENJA! %s! Zovem ti ženu, mamu I šefa!!!",
+        "NUKLEARNA OPCIJA: %s! Objavljujem na Facebooku da ne obavljaš zadatke! 💣",
+        "Marko, %s! Idem ti obrisati WiFi lozinku ako ne napraviš! 📵"
     )
 
     fun getEscalatingReminder(taskTitle: String, level: Int): String {
@@ -127,7 +168,10 @@ object MarkoMessages {
         "Frižider se neće sam napuniti, Marko.",
         "Prazna lista za kupovinu? Živiš od zraka?",
         "Ništa za kupiti? Marko, barem kruh i mlijeko!",
-        "Prazna lista. Nadam se da imaš barem nešto u frižideru."
+        "Prazna lista. Nadam se da imaš barem nešto u frižideru.",
+        "Marko, znam da voliš prazan frižider, ali obitelj ne.",
+        "Nula artikala. Planiraš jesti sjećanja za večeru?",
+        "Prazna lista! Da nisi na dijeti? Ako jesi, svejedno kupi WC papir."
     )
 
     fun getEmptyShoppingMessage(): String = emptyShoppingMessages.random()
@@ -137,7 +181,10 @@ object MarkoMessages {
     private val shoppingDoneMessages = listOf(
         "Sve kupljeno! Marko, heroj supermarketa! 🛒",
         "Lista gotova! Frižider će biti ponosan.",
-        "Svaka čast, kupovino obavljena! 🎉"
+        "Svaka čast, kupovina obavljena! 🎉",
+        "Bravo Marko! Sad si punopravni odrasli čovjek! Za danas.",
+        "Kupovina done! Ekonomija ti zahvaljuje. 💰",
+        "Sve kupljeno! Nadam se da nisi zaboravio nešto... opet."
     )
 
     fun getShoppingDoneMessage(): String = shoppingDoneMessages.random()
@@ -147,8 +194,23 @@ object MarkoMessages {
     private val deleteMessages = listOf(
         "Obrisano! Kao da nikad nije ni postojalo.",
         "Zadatak nestao! Poof! ✨",
-        "Izbrisano. Tajnu čuvam. 🤫"
+        "Izbrisano. Tajnu čuvam. 🤫",
+        "Nema ga više! Problem riješen... na svoj način.",
+        "Obrisano! Nitko neće znati. Osim ja. 👀",
+        "Zadatak eliminiran! Efikasno. Sviđa mi se pristup."
     )
 
     fun getDeleteMessage(): String = deleteMessages.random()
+
+    // --- Motivational (when user opens app after long time) ---
+
+    val comebackMessages = listOf(
+        "Marko se vratio! Mislio sam da si me izbrisao. 😢",
+        "O, pa tko je tu! Dugo te nije bilo, Marko!",
+        "Živ si! Već sam htio poslati potragu!",
+        "Marko! Koliko dugo si mislio da će se zadaci sami obaviti?",
+        "Povratak legende! Tvoji zadaci su te čekali. Strpljivo. Previše strpljivo."
+    )
+
+    fun getComebackMessage(): String = comebackMessages.random()
 }
