@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(chmod:*)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 java:*)",
+      "Bash(unzip:*)",
+      "Bash(java -jar:*)",
+      "Bash(GRADLE_HOME=/tmp/gradle-full/gradle-8.11.1 JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 /tmp/gradle-full/gradle-8.11.1/bin/gradle wrapper:*)",
+      "Bash(/tmp/gradle-full/gradle-8.11.1/bin/gradle:*)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 /tmp/gradle-full/gradle-8.11.1/bin/gradle:*)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 ./gradlew assembleDebug:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

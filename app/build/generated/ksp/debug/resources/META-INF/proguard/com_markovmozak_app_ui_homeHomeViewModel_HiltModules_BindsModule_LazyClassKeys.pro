@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.home.HomeViewModel

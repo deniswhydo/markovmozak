@@ -1,0 +1,5 @@
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.home.HomeViewModel
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.home.HomeViewModel
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.addtask.AddTaskViewModel
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.addtask.AddTaskViewModel
+-keep,allowobfuscation,allowshrinking class com.markovmozak.app.ui.tasks.TasksViewModel
